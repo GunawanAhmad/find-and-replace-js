@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tubes Tubes Tubes !</title>
+    <script defer type="module" src="./script.js"></script>
+    <style>
+      span {
+        background-color: rgba(252, 214, 0, 0.6);
+      }
+      p {
+        white-space: pre-wrap;
+      }
+      span {
+        white-space: pre-wrap;
+      }
+
+      body {
+        max-width: 1024px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" placeholder="find" class="find-input" />
+      <input type="text" placeholder="replace with" class="replace-input" />
+      <button class="replace-btn">Replace</button>
+      <div>
+        <div>
+          <input type="checkbox" name="check1" id="check1" />
+          <label for="check1">Exact word</label>
+        </div>
+        <div>
+          <input type="checkbox" name="check2" id="check2" checked />
+          <label for="check2">Match whole</label>
+        </div>
+      </div>
+    </div>
+    <p class="text-source"></p>
+  </body>
+</html>
