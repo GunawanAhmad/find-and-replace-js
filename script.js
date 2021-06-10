@@ -7,7 +7,7 @@ const patInput = document.querySelector(".find-input");
 const replaceInput = document.querySelector(".replace-input");
 const replaceBtn = document.querySelector(".replace-btn");
 
-let string = "aa ba a aa ba";
+let string = getRandomString(5000);
 source.innerHTML = string;
 let stringArr = string.split("");
 let positionIndex = [];
