@@ -18,11 +18,11 @@ patInput.addEventListener("keyup", function () {
 
 wholeCheckmark.addEventListener("change", function () {
   // source.innerHTML = string;
-  getAllMatch(patInput.value, !this.checked, isExactCheck.checked);
+  getAllMatch(patInput.value, !wholeCheckmark.checked, isExactCheck.checked);
 });
 
 isExactCheck.addEventListener("change", function () {
-  getAllMatch(patInput.value, this.checked, isExactCheck.checked);
+  getAllMatch(patInput.value, !wholeCheckmark.checked, isExactCheck.checked);
 });
 
 replaceBtn.addEventListener("click", function () {

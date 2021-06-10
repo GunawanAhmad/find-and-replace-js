@@ -37,11 +37,14 @@ export default function KMPSearch(pat, txt, isAll = false, isExact = false) {
     if (j == M) {
       if (isExact) {
         if (
-          !txt[i - j - 1] ||
-          (txt[i - j - 1] == " " && (!txt[i] || txt[i] == " "))
+          (!txt[i - j - 1] || txt[i - j - 1] == " ") &&
+          (!txt[i] || txt[i] == " ")
         ) {
           // console.log(i - 1);
           positionIndex.push(i - j);
+          if (isAll) {
+            return positionIndex;
+          }
         }
         j = lps[j - 1];
       } else {
@@ -51,10 +54,9 @@ export default function KMPSearch(pat, txt, isAll = false, isExact = false) {
           positionIndex.push(i - j);
           lasPos = i - 1;
           j = 0;
-          if (isAll) {
-            console.log("hei");
-            return positionIndex;
-          }
+        }
+        if (isAll) {
+          return positionIndex;
         }
       }
     } else if (i < N && pat[j] != txt[i] && pat[j] != "*") {
