@@ -66,7 +66,7 @@ export default function KMPSearch(pat, txt, isAll = false, isExact = false) {
         i = i + 1;
       }
     } else if (pat[j] == "*" && txt[i] == " ") {
-      // i++;
+      i++;
       j = 0;
     }
   }
